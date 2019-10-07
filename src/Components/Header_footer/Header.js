@@ -23,7 +23,12 @@ export default class Header extends Component {
                 <Toolbar styles={{display:'flex'}}>
                     <div styles={{flexGrow: 1}}>
                         <div className="heaer_logo">
-                            <CityLogo/>
+                            <CityLogo
+                                link={true}
+                                linkTo="/"
+                                width="70px"
+                                height="70px"
+                            />
                         </div>
                     </div>
                     <Link to="/the_team">
