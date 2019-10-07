@@ -4,7 +4,6 @@ import Layout from './HOC/Layout'
 const Routes = props => {
   return(
     <Layout>
-      Hello
     </Layout>
   )
 }
