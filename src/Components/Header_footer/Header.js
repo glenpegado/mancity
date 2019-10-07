@@ -20,8 +20,8 @@ export default class Header extends Component {
                     borderBottom: '2px solid #00285e'
                 }}
             >
-                <Toolbar styles={{display:'flex'}}>
-                    <div styles={{flexGrow: 1}}>
+                <Toolbar style={{display:'flex'}}>
+                    <div style={{flexGrow: 1}}>
                         <div className="heaer_logo">
                             <CityLogo
                                 link={true}
