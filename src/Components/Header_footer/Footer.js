@@ -15,7 +15,6 @@ const Footer = () => {
             </div>
             <div className="footer_discl">
                 Manchester city 2019.All rights reserved
-
             </div>
             
         </footer>

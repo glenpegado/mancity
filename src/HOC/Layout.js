@@ -6,8 +6,8 @@ const Layout = props => {
   return(
     <div>
       <Header />
-      <Footer/>
       {props.children}
+      <Footer/>
     </div>
   )
 }
