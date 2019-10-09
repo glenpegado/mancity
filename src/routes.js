@@ -1,9 +1,10 @@
 import React from 'react';
-import Layout from './HOC/Layout';
+import Layout from './Hoc/Layout'
 import {Switch, Route} from 'react-router-dom';
+
 import Home from './Components/home';
 
-const Routes = props => {
+const Routes = (props) => {
   return(
     <Layout>
       <Switch>
