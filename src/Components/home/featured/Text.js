@@ -57,11 +57,69 @@ export default class Text extends Component {
         </Animate>
     )
 
+    animateSecond = () => (
+        <Animate
+        show={true}
+        start={{
+            opacity:0,
+            x:503,
+            y:586
+        }}
+        enter={{
+            opacity:[1],
+            x:[273],
+            y:[586],
+            timing:{delay: 300, duration: 1000, ease: easePolyOut}
+        }}
+    >
+        {({opacity, x, y}) => (
+            <div className="featured_second"
+                style={{
+                    opacity,
+                    transform: `translate(${x}px, ${y}px)`
+                }}
+            >
+                Championships
+            </div>
+        )}   
+    </Animate>
+    )
+
+    animatePlayer = () => (
+        <Animate
+        show={true}
+        start={{
+            opacity:0,
+            x:503,
+            y:586
+        }}
+        enter={{
+            opacity:[1],
+            x:[273],
+            y:[586],
+            timing:{delay: 800, duration: 1000, ease: easePolyOut}
+        }}
+    >
+        {({opacity, x, y}) => (
+            <div className="featured_player"
+                style={{
+                    opacity,
+                    transform: `translate(500px, 201px)`
+                }}
+            >
+                Championships
+            </div>
+        )}   
+    </Animate>
+    )
+
     render() {
         return (
             <div className="featured_text">
                 {this.animateNumber()}
                 {this.animateFirst()}
+                {this.animateSecond()}
+                {this.animatePlayer()}
             </div>
         )
     }
