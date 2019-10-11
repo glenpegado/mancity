@@ -1,10 +1,12 @@
 import React from 'react';
 import Stripes from './Stripes';
+import Text from './Text';
 
 export default function Featured() {
     return (
-        <div class="featured_wrapper">
+        <div className="featured_wrapper">
             <Stripes/>
+            <Text/>
         </div>
     )
 }
