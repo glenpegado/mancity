@@ -11,7 +11,7 @@ export default class Stripes extends Component {
                 left: 120,
                 rotate:25,
                 top:-260,
-                delay:0,
+                delay:0
             },
             {
                 background:'#ffffff',
@@ -35,26 +35,32 @@ export default class Stripes extends Component {
             <Animate 
                 key={i}
                 show={true}
+
                 start={{
-                    background: '#ffffff',
+                    background:[stripe.background],
                     opacity: 0,
-                    left:0
+                    left:0,
+                    rotate: 0,
+                    top: 0
                 }}
+                
                 enter={{
                     background:[stripe.background],
                     opacity: [1],
                     left:[stripe.left],
-                    timing: {dealy: 500, duration: 200, ease:easePolyOut}
+                    rotate: [stripe.rotate],
+                    top: [stripe.top],
+                    timing: {delay: stripe.delay, duration: 200, ease:easePolyOut}
                 }}
             >
-                {({opacity,left,background}) => {
+                {({opacity,left, rotate, top, background}) => {
                     return(
                         <div
                             className="stripe"
                             style={{
                                 background,
                                 opacity,
-                                transform: `rotate(0deg) translate(${left}px, 0px)`
+                                transform: `rotate(${rotate}deg) translate(${left}px, ${top}px)`
                             }}
                         ></div>
                     )
