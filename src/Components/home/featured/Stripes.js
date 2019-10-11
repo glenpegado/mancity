@@ -50,7 +50,12 @@ export default class Stripes extends Component {
                     left:[stripe.left],
                     rotate: [stripe.rotate],
                     top: [stripe.top],
-                    timing: {delay: stripe.delay, duration: 200, ease:easePolyOut}
+                    timing: {delay: stripe.delay, duration: 200, ease:easePolyOut},
+                    events:{
+                        end(){
+                            console.log('animation finished')
+                        }
+                    }
                 }}
             >
                 {({opacity,left, rotate, top, background}) => {
