@@ -10,7 +10,7 @@ export default function MatchesHome() {
                     size="50px"
                     color="#fff"
                 >
-
+                    Matches
                 </Tag>
 
                 BLOCK

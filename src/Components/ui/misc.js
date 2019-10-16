@@ -3,12 +3,16 @@ import {Link} from 'react-router-dom';
 
 export const Tag = (props) => {
     const template = 
-    <div>
+        <div
         style={{
-            
+            background: props.bck,
+            fontSize: props.size,
+            color: props.color,
+            padding: '5px 10 px',
+            display: 'inline-block',
+            fontFamily: 'Righteous'
         }}
-        tag
-    </div>
+        >tag</div>
 
     if(props.link){
         return (
