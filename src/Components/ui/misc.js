@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export const Tag = (props) => {
+export const Tag = props => {
     const template = 
         <div
         style={{
@@ -12,15 +12,18 @@ export const Tag = (props) => {
             display: 'inline-block',
             fontFamily: 'Righteous'
         }}
-        >tag</div>
+        >
+            {props.children}
+        </div>
 
     if(props.link){
         return (
             <Link to={props.linkto}>
-              {template}  
+                {template}  
             </Link>
         )
-    } else {
+    } 
+    else {
         return template
     }
 
