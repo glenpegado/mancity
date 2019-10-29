@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tag} from '../../ui/misc'
+import Blocks from './Blocks';
 
 export default function MatchesHome() {
     return (
@@ -13,7 +14,7 @@ export default function MatchesHome() {
                     Matches
                 </Tag>
 
-                BLOCK
+                    <Blocks/>
 
                 <Tag
                     bck ="#ffffff"
