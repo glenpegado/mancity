@@ -13,7 +13,9 @@ export default class Blocks extends Component {
             const matches = firebaseLooper(snapshot)
 
  
-            console.log(matches)
+            this.setState({
+                matches: []
+            })
         })
     }
 
