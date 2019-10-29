@@ -14,12 +14,11 @@ const config = {
   };
 
   firebase.initializeApp(config);
-  firebase.analytics(); 
 
   const firebaseDB = firebase.database();
 
   firebaseDB.ref('matches').once('value')
     .then((snapshot) => {
-        console.log(snapshot)
+        console.log(snapshot.val())
     })
 
