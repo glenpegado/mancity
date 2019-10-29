@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {firebaseMatches} from '../../../firebase'
+import {firebaseLooper} from '../../ui/misc'
 export default class Blocks extends Component {
     
     state = {
@@ -9,6 +10,10 @@ export default class Blocks extends Component {
     componentDidMount(){
         firebaseMatches.limitToLast(6).once('value').then((snapshot)=>{
             console.log(snapshot.val)
+            const matches = firebaseLooper(snapshot)
+
+ 
+            console.log(matches)
         })
     }
 
@@ -20,7 +25,7 @@ export default class Blocks extends Component {
 
     render() {
         return (
-            <div classname="home_matches">
+            <div className="home_matches">
                 {this.showMatches(this.state.matches)}
             </div>
         )
