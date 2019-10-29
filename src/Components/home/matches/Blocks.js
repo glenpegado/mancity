@@ -6,6 +6,12 @@ export default class Blocks extends Component {
         matches:[]
     }
 
+    componentDidMount(){
+        firebaseMatches.limitToLast(6).once('value').then((snapshot)=>{
+            console.log(snapshot.val)
+        })
+    }
+
     showMatches = () => (
         <div>
             match
