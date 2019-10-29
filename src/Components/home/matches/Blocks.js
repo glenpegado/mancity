@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {firebaseMatches} from '../../../firebase'
-import {firebaseLooper} from '../../ui/misc'
+import {firebaseLooper, reverseArray} from '../../ui/misc'
 export default class Blocks extends Component {
     
     state = {
@@ -14,7 +14,7 @@ export default class Blocks extends Component {
 
  
             this.setState({
-                matches: []
+                matches: reverseArray(matches)
             })
         })
     }
@@ -26,6 +26,7 @@ export default class Blocks extends Component {
     )
 
     render() {
+        console.log(this.state)
         return (
             <div className="home_matches">
                 {this.showMatches(this.state.matches)}
