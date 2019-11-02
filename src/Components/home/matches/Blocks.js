@@ -12,7 +12,6 @@ export default class Blocks extends Component {
             console.log(snapshot.val)
             const matches = firebaseLooper(snapshot)
 
- 
             this.setState({
                 matches: reverseArray(matches)
             })
