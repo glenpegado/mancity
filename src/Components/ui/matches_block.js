@@ -1,11 +1,16 @@
 import React from 'react'
 
-export default class MatchesBlock{
-    render() {
-        return (
-            <div>
-                
+const MatchesBlock = ({match}) =>{
+        
+    console.log(match)
+
+    return (
+            <div className="match_block">
+                <div className="match_date">
+                    {match.final ? match.date : `Match not played yet: ${match.date}`}
+                </div>
             </div>
         )
-    }
-}
+    } 
+
+export default MatchesBlock;
