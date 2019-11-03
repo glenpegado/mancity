@@ -17,7 +17,7 @@ const MatchesBlock = ({match}) =>{
                             <div className="team_name">{match.local}</div>
                         </div>
                         <div className="right">
-
+                            {match.final ? match.resultLocal: '-'}
                         </div>
                     </div>
                 </div>
