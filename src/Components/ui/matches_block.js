@@ -13,8 +13,8 @@ const MatchesBlock = ({match}) =>{
                     <div className="match_top">
                         <div className="left">
                             <div className="icon" style={{background:`url(/images/team_icons/${match.localThmb}.png)`}}>
-
                             </div>
+                            <div className="team_name">{match.local}</div>
                         </div>
                         <div className="right">
 
