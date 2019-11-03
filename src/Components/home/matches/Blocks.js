@@ -1,27 +1,35 @@
 import React, { Component } from 'react'
 import {firebaseMatches} from '../../../firebase'
 import {firebaseLooper, reverseArray} from '../../ui/misc'
+
+import MatchesBlock from '../../ui/matches_block'
 export default class Blocks extends Component {
     
     state = {
         matches:[]
     }
 
-    // componentDidMount(){
-    //     firebaseMatches.limitToLast(6).once('value').then((snapshot)=>{
-    //         console.log(snapshot.val)
-    //         const matches = firebaseLooper(snapshot)
+    componentDidMount(){
+        firebaseMatches.limitToLast(6).once('value').then((snapshot)=>{
+            console.log(snapshot.val)
+            const matches = firebaseLooper(snapshot)
 
-    //         this.setState({
-    //             matches: reverseArray(matches)
-    //         })
-    //     })
-    // }
+            this.setState({
+                matches: reverseArray(matches)
+            })
+        })
+    }
 
-    showMatches = () => (
-        <div>
-            match
-        </div>
+    showMatches = (matches) => (
+        matches ?
+            matches.map((match)=>(
+                <div className="item">
+                    <div className="wrapper">
+                        <MatchesBlock match={match}/>
+                    </div>
+                </div>
+            ))
+        :null
     )
 
     render() {
