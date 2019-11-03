@@ -7,16 +7,16 @@ export default class Blocks extends Component {
         matches:[]
     }
 
-    componentDidMount(){
-        firebaseMatches.limitToLast(6).once('value').then((snapshot)=>{
-            console.log(snapshot.val)
-            const matches = firebaseLooper(snapshot)
+    // componentDidMount(){
+    //     firebaseMatches.limitToLast(6).once('value').then((snapshot)=>{
+    //         console.log(snapshot.val)
+    //         const matches = firebaseLooper(snapshot)
 
-            this.setState({
-                matches: reverseArray(matches)
-            })
-        })
-    }
+    //         this.setState({
+    //             matches: reverseArray(matches)
+    //         })
+    //     })
+    // }
 
     showMatches = () => (
         <div>
