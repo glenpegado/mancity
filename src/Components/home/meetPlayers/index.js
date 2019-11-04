@@ -19,7 +19,32 @@ export default class MeetPlayers extends Component {
                         </div>
                         <div className="home_text_wrapper">
                             <div>
-                                car
+                                <Tag
+                                    bck="#0e1731"
+                                    size="100px"
+                                    color="#ffffff"
+                                    add={{
+                                        display:'inline-block',
+                                        marginBottom: '20px',
+
+                                    }}
+                                >
+                                    Meet
+                                </Tag>
+                            </div>
+                            <div>
+                                <Tag
+                                    bck="#0e1731"
+                                    size="100px"
+                                    color="#ffffff"
+                                    add={{
+                                        display:'inline-block',
+                                        marginBottom: '20px',
+                                        
+                                    }}
+                                >
+                                    Players
+                                </Tag>
                             </div>
                         </div>
                     </div>
