@@ -4,28 +4,32 @@ import Animate from 'react-move/Animate'
 import Otamendi from '../../../Resources/images/players/Otamendi.png'
 import PlayerCard from '../../ui/playerCard'
 
-export default class HomeCards extends Component {
+class HomeCards extends Component {
 
-    state = {
-        cards:[
-            {
-                bottom:90,
-                left: 300
-            },
-            {
-                bottom:60,
-                left: 200
-            },
-            {
-                bottom:30,
-                left: 100
-            },
-            {
-                bottom:0,
-                left: 0
-            }
-        ]
+    constructor(){
+        super();
+        this.state = {
+            cards:[
+                {
+                    bottom:90,
+                    left: 300
+                },
+                {
+                    bottom:60,
+                    left: 200
+                },
+                {
+                    bottom:30,
+                    left: 100
+                },
+                {
+                    bottom:0,
+                    left: 0
+                }
+            ]
+        }
     }
+    
 
     showAnimateCards = () => (
         this.state.cards.map((card, i)=>(
@@ -61,6 +65,7 @@ export default class HomeCards extends Component {
                             >
                                 
                             </PlayerCard>
+                        
                         </div>
                     )
                 }}
@@ -71,8 +76,10 @@ export default class HomeCards extends Component {
     render() {
         return (
             <div>
-                {this.showAnimateCards()}
+                {this.showAnimateCards()}       
             </div>
         )
     }
 }
+
+export default HomeCards;

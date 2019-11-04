@@ -12,16 +12,8 @@ export default class MeetPlayers extends Component {
 
     render() {
         return (
-            <Reveal
-                fraction={0.7}
-                onReveal={()=>{
-                    console.log('reveal')
-                    this.setState=({
-                        show: true
-                    })
-                }}
-            >
 
+            <Reveal fraction={0.7} onReveal={()=>{this.setState=({ show: true})}}>
                 <div className="home_meetplayers"
                     style={{background:`#ffffff url(${Stripes})`}}
                 >
@@ -30,9 +22,7 @@ export default class MeetPlayers extends Component {
                             <div className="home_card_wrapper">
                                 <HomeCards
                                     show={this.state.show}
-                                >
-
-                                </HomeCards>
+                                />
                             </div>
                             <div className="home_text_wrapper">
                                 <div>
