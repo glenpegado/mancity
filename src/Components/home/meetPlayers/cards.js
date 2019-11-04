@@ -31,10 +31,27 @@ export default class HomeCards extends Component {
             <Animate
                 key={i}
                 show={this.props.show}
+
+                start={{
+                    left:0,
+                    bottom:0
+                }}
+
+                enter={{
+                    left: [card.left],
+                    bottom: [card.bottom],
+                    timing: {duration: 500, ease: easePolyOut}
+                }}
             >
-                {({})=>{
+                {({left, bottom})=>{
                     return (
-                        <div>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                left,
+                                bottom
+                            }}
+                        >
                             div
                         </div>
                     )
