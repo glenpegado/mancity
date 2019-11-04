@@ -48,27 +48,27 @@ class HomeCards extends Component {
                     timing: {duration: 500, ease: easePolyOut}
                 }}
             >
-                {({left, bottom})=>{
-                    return (
-                        <div
-                            style={{
-                                position: 'absolute',
-                                left,
-                                bottom
-                            }}
-                        >
-                            <PlayerCard
-                                namer="3"
-                                name="Nicolas"
-                                lastname="Otamendi"
-                                bck={Otamendi}
+                {
+                    ({left, bottom}) => {
+                        return (
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    left,
+                                    bottom
+                                }}
                             >
-                                
-                            </PlayerCard>
-                        
-                        </div>
-                    )
-                }}
+                                <PlayerCard
+                                    numberr="3"
+                                    name="Nicolas"
+                                    lastname="Otamendi"
+                                    bck={Otamendi}
+                                >   
+                                </PlayerCard>
+                            </div>
+                        )
+                    }
+                }
             </Animate>
         ))
     )
