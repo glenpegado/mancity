@@ -46,6 +46,22 @@ export default class MeetPlayers extends Component {
                                     Players
                                 </Tag>
                             </div>
+                            <div>
+                                <Tag
+                                    bck="#ffffff"
+                                    size="27px"
+                                    color="#0e1731"
+                                    link={true}
+                                    linkto="/the_team"
+                                    add={{
+                                            display:"inline-block",
+                                            marginBottom: "27px",
+                                            border: '1px solid #0e1731'
+                                        }}
+                                >
+                                Meet them here
+                                </Tag>
+                            </div>
                         </div>
                     </div>
                 </div>
