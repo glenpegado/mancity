@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function PromotionAnimation() {
+const PromotionAnimation = () => {
     return (
         <div>
             animation
         </div>
     )
 }
+
+export default PromotionAnimation
