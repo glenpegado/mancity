@@ -30,6 +30,10 @@ export default class Enroll extends Component {
     }
 
 
+    updateForm(){
+         
+    }
+
     submitForm(){
 
     }
@@ -46,7 +50,7 @@ export default class Enroll extends Component {
                         <FormField 
                             id={'email'}
                             formdata={this.state.formdata.email}
-
+                            change={(element)=> this.updateForm(element)}
                         />
                         </div>
                     </form>
