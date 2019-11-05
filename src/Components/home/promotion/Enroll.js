@@ -7,9 +7,7 @@ export default class Enroll extends Component {
 
     state={
         formError:false,
-
         formSuccess:'',
-
         formdata:{
             email:{
                 element:'input',
@@ -38,6 +36,7 @@ export default class Enroll extends Component {
         newElement.value = element.event.target.value;
 
         let valiData = validate(newElement)
+        newElement.valid = valiData[0]
         
         console.log(valiData) 
 
