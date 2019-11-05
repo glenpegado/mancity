@@ -37,10 +37,13 @@ export default class Enroll extends Component {
 
         let valiData = validate(newElement)
         newElement.valid = valiData[0]
+        newElement.validationMessage = valiData[1]
         
         console.log(valiData) 
 
         newFormdata[element.id] = newElement;
+
+        console.log(newFormdata)
 
         this.setState({
             formdata: newFormdata
