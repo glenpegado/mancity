@@ -7,7 +7,7 @@ export default class Enroll extends Component {
         formError:false,
 
         formSuccess:'',
-        
+
         formdata:{
             email:{
                 element:'input',
@@ -29,11 +29,24 @@ export default class Enroll extends Component {
     }
 
 
+    submitForm(){
+
+    }
+
     render() {
         return (
-            <div>
-                
-            </div>
+            <Fade>
+                <div className="enroll_wrapper">
+                    <form onSubmit={(event)=> this.submitForm(event)}>
+                        <div className="enroll_title">
+                            Enter your email
+                        </div>
+                        <div className="enroll_input">
+                            
+                        </div>
+                    </form>
+                </div>
+            </Fade>
         )
     }
 }
