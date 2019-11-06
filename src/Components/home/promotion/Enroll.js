@@ -44,6 +44,7 @@ class Enroll extends Component {
         newFormdata[element.id] = newElement;
 
         this.setState({
+            formError: false,
             formdata: newFormdata
         })
     }
@@ -64,7 +65,9 @@ class Enroll extends Component {
         if(formIsValid){
             console.log(dataToSubmit )
         } else {
-            console.log('ERROR')
+            this.setState({
+                formError: true
+            })
         }
     }
 
@@ -84,6 +87,8 @@ class Enroll extends Component {
                             change={(element)=> this.updateForm(element)}
                         />
 
+                        {this.state.formError ? 
+                            <div className="error_label">Something is wrong, try again.</div>: null}
                         <button onClick={(event)=> this.submitForm}>Enroll</button>
                         </div>
                     </form>
