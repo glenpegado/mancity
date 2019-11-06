@@ -1,33 +1,36 @@
 import React, { Component } from 'react'
+
 import Fade from 'react-reveal/Fade';
 import FormField from '../../ui/formFields';
 import {validate} from '../../ui/misc';
+class Enroll extends Component {
 
-export default class Enroll extends Component {
-
-    state={
-        formError:false,
-        formSuccess:'',
-        formdata:{
-            email:{
-                element:'input',
-                value:'',
-                config:{
-                    name:'email_input',
-                    type: 'email',
-                    placeholder: 'Enter your email'
-                },
-                validation:{
-                    required: true,
-                    email: true,
-                
-                },
-                valid: false,
-                validationMessage:''
+    constructor(){
+        super();
+        this.state={
+            formError:false,
+            formSuccess:'',
+            formdata:{
+                email:{
+                    element:'input',
+                    value:'',
+                    config:{
+                        name:'email_input',
+                        type: 'email',
+                        placeholder: 'Enter your email'
+                    },
+                    validation:{
+                        required: true,
+                        email: true,
+                    
+                    },
+                    valid: false,
+                    validationMessage:''
+                }
             }
         }
     }
-
+   
 
     updateForm(element){
         const newFormdata = {...this.state.formdata}   
@@ -39,20 +42,14 @@ export default class Enroll extends Component {
         newElement.valid = valiData[0]
         newElement.validationMessage = valiData[1]
         
-        console.log(valiData) 
-
         newFormdata[element.id] = newElement;
-
-        console.log(newFormdata)
 
         this.setState({
             formdata: newFormdata
         })
     }
 
-    submitForm(){
-
-    }
+    submitForm(){}
 
     render() {
         return (
@@ -74,4 +71,7 @@ export default class Enroll extends Component {
             </Fade>
         )
     }
+
 }
+
+export default Enroll;

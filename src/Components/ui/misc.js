@@ -1,7 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react'
 
-export const Tag = props => {
+import {Link} from 'react-router-dom'
+
+export const Tag = (props) => {
     const template = 
         <div
         style={{
@@ -23,13 +24,10 @@ export const Tag = props => {
                 {template}  
             </Link>
         )
-    } 
-    else {
+    } else {
         return template
     }
-
 }
-
 
 export const firebaseLooper = (snapshot) => {
     const data = [];
@@ -48,7 +46,6 @@ export const reverseArray = (actualArray) => {
     for(let i = actualArray.length - 1; i >= 0; i--){
         reversedArray.push(actualArray[i])
     }
-    
     return reversedArray
 }
 

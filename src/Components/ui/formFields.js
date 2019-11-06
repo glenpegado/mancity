@@ -1,10 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-const FormField = ({formdata, id, change}) => {
+function FormField({formdata, id, change}){
+
+    const showError = () => {
+        let errorMessage = <div className="error_label">
+            {
+                formdata.validation && !formdata.valid ?
+                    formdata.validationMessage
+                : null
+            }
+        </div>
+
+        return errorMessage
+    }
 
     const renderTemplate = () => {
         let formTemplate = null;
-
         switch(formdata.element ){
             case('input'):
                 formTemplate = (
@@ -14,6 +25,7 @@ const FormField = ({formdata, id, change}) => {
                             value={formdata.value}
                             onChange={(event)=> change({event, id})}
                         />
+                        {showError()}
                     </div>
                 ) 
             break;
@@ -29,6 +41,7 @@ const FormField = ({formdata, id, change}) => {
             {renderTemplate()}
         </div>
     )
+
 }
 
 export default FormField;
