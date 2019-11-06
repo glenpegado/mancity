@@ -57,10 +57,15 @@ class Enroll extends Component {
         let formIsValid = true;
         
         for(let key in formdata){
-            dataToSubmit[key] = formdata[key]
+            dataToSubmit[key] = formdata[key].value;
+            formIsValid = formdata[key].valid && formIsValid
         }
 
-        console.log(dataToSubmit)
+        if(formIsValid){
+            console.log(dataToSubmit )
+        } else {
+            console.log('ERROR')
+        }
     }
 
 
