@@ -45,6 +45,16 @@ class Enroll extends Component {
             formSuccess: 'Congratulations'
         })
     }
+        successMessage(){
+            setTimeout(() => {
+                this.setState({
+                    formSuccess:''
+                })
+            }, 2000)
+        }
+
+        
+    
     
 
     updateForm(element){
