@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 import FormField from '../../ui/formFields';
 import {validate} from '../../ui/misc';
 
-// imoprt {firebasePromotions} from '../../../firebase';
+import {firebasePromotions} from '../../../firebase';
 
 class Enroll extends Component {
     constructor(){
