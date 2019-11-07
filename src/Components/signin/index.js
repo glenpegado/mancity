@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import FormField from '../ui/formFields';
+import {validate} from '../ui/misc';
+
 
 export default class Signin extends Component {
     constructor(){
@@ -22,6 +25,22 @@ export default class Signin extends Component {
                     },
                     valid: false,
                     validationMessage:''
+                },
+                password:{
+                    element:'input',
+                    value:'',
+                    config:{
+                        name:'password_input',
+                        type: 'password',
+                        placeholder: 'Enter your password'
+                    },
+                    validation:{
+                        required: true,
+                        email: true,
+                    
+                    },
+                    valid: false,
+                    validationMessage:''
                 }
             }
         }
@@ -31,8 +50,12 @@ export default class Signin extends Component {
 
     render() {
         return (
-            <div>
-                sign in 
+            <div className="container">
+                <div className="signin_wrapper" style={{margin:'100px'}}>
+
+                    <form onSubmit={(event)=> this.submitForm()}></form>
+
+                </div> 
             </div>
         )
     }
