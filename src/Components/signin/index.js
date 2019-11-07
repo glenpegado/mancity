@@ -46,6 +46,9 @@ export default class Signin extends Component {
         }
     }
 
+    submitForm(){
+
+    }
 
 
     render() {
@@ -53,7 +56,9 @@ export default class Signin extends Component {
             <div className="container">
                 <div className="signin_wrapper" style={{margin:'100px'}}>
 
-                    <form onSubmit={(event)=> this.submitForm()}></form>
+                    <form onSubmit={(event)=> this.submitForm()}>
+                        <h2>Please Login</h2>
+                    </form>
 
                 </div> 
             </div>
