@@ -56,9 +56,9 @@ export default class Signin extends Component {
             <div className="container">
                 <div className="signin_wrapper" style={{margin:'100px'}}>
 
-                    <form onSubmit={(event)=> this.submitForm()}>
+                    {/* <form onSubmit={(event)=> this.submitForm()}>
                         <h2>Please Login</h2>
-                    </form>
+                    </form> */}
 
                 </div> 
             </div>
